@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serene Spa | Traditional & Holistic Massages</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Font Awesome (Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Custom gradient for buttons */
+    .btn-gradient {
+      background: linear-gradient(45deg, #f59e0b, #ef4444);
+    }
+    .btn-gradient:hover {
+      background: linear-gradient(45deg, #ef4444, #f59e0b);
+    }
+    .chat-container {
+      height: 500px;
+      transition: all 0.3s ease;
+    }
+    .chat-message {
+      max-width: 80%;
+    }
+    .bot-message {
+      background-color: #f3f4f6;
+      border-radius: 18px 18px 18px 4px;
+    }
+    .user-message {
+      background-color: #3b82f6;
+      color: white;
+      border-radius: 18px 18px 4px 18px;
+      margin-left: auto;
+    }
+    .chat-input:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gray-50">
+  <!-- ===== Header Section ===== -->
+  <header class="sticky top-0 z-50 bg-white shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <span class="text-2xl font-bold text-amber-600">Serene Spa</span>
+      </div>
+      
+      <!-- Navigation Menu (Desktop) -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#home" class="text-gray-700 hover:text-amber-600">Home</a>
+        <a href="#massage" class="text-gray-700 hover:text-amber-600">Massages</a>
+        <a href="#services" class="text-gray-700 hover:text-amber-600">Services</a>
+        <a href="#about" class="text-gray-700 hover:text-amber-600">About Us</a>
+        <a href="#contact" class="text-gray-700 hover:text-amber-600">Contact</a>
+      </nav>
+      
+      <!-- Call-to-Action & Mobile Menu -->
+      <div class="flex items-center space-x-4">
+        <button class="btn-gradient text-white px-4 py-2 rounded-full font-medium hidden md:block">
+          Book Now
+        </button>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-gray-700">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+      <a href="#home" class="block py-2 text-gray-700 hover:text-amber-600">Home</a>
+      <a href="#massage" class="block py-2 text-gray-700 hover:text-amber-600">Massages</a>
+      <a href="#services" class="block py-2 text-gray-700 hover:text-amber-600">Services</a>
+      <a href="#about" class="block py-2 text-gray-700 hover:text-amber-600">About Us</a>
+      <a href="#contact" class="block py-2 text-gray-700 hover:text-amber-600">Contact</a>
+      <button class="btn-gradient text-white px-4 py-2 rounded-full font-medium mt-2 w-full">
+        Book Now
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+    <div class="absolute inset-0 bg-black opacity-40"></div>
+    <div class="container mx-auto px-4 z-10 text-center text-white" data-aos="fade-up">
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">Relax, Rejuvenate, Revive</h1>
+      <p class="text-xl md:text-2xl mb-8">Experience authentic traditional massages for mind and body harmony.</p>
+      <button class="btn-gradient text-white px-8 py-3 rounded-full font-bold text-lg hover:shadow-lg transition-all">
+        Book Your Session
+      </button>
+    </div>
+  </section>
+
+  <!-- ===== Massage Section ===== -->
+ <!-- ===== Massage Section ===== -->
+<section id="massage" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-4xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">Traditional Healing Massages</h2>
+    
+    <!-- Thai Massage -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16" data-aos="fade-right">
+      <div class="bg-amber-50 p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-amber-700 mb-4">Traditional Thai Massage</h3>
+        <p class="text-gray-700 mb-4">
+          Traditional Thai Massage, or Nuad Thai, is an ancient healing system from Thailand that blends pressure point therapy with deep stretching. Often described as "Thai yoga massage," the practitioner guides you through yoga-like stretches while applying rhythmic pressure. This technique combines elements of acupressure, Indian Ayurvedic principles, and assisted yoga postures, reflecting influences from neighboring India and China.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Historically, Thai massage is said to have been founded by Jivaka, the physician to the Buddha over 2,500 years ago. Today, it is recognized by UNESCO as intangible cultural heritage. Sessions are performed fully clothed on a mat without oils, using hands, elbows, knees, and feet to stimulate energy lines (Sen lines).
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">60 mins / $75</span>
+          <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">UNESCO Heritage</span>
+          <span class="bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-sm font-medium">Energy Work</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="Thai Massage" 
+             class="rounded-lg shadow-md w-full h-96 object-cover">
+      </div>
+    </div>
+    
+    <!-- Chinese Tui Na -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16" data-aos="fade-left">
+      <div class="order-1 md:order-2 bg-red-50 p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-red-700 mb-4">Chinese Tui Na Massage</h3>
+        <p class="text-gray-700 mb-4">
+          Chinese Tui Na (pronounced "twee nah") is one of the pillars of Traditional Chinese Medicine (TCM). Its name, meaning "push and grasp," reflects the manual techniques used. Originating over 2,000 years ago, Tui Na has been used in Chinese hospitals to treat various conditions by balancing qi (vital energy) through meridians.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Techniques include brushing, kneading, pressing, rolling, and joint rotations resembling physical therapy. Unlike Swedish massage, Tui Na is more focused on specific ailments like back pain or neck stiffness. While some techniques may feel intense, the treatment improves circulation and harmonizes energy.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">60 mins / $70</span>
+          <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Pain Relief</span>
+          <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">Meridian Therapy</span>
+        </div>
+      </div>
+      <div class="order-2 md:order-1 flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80" 
+             alt="Tui Na Massage" 
+             class="rounded-lg shadow-md w-full h-96 object-cover">
+      </div>
+    </div>
+    
+    <!-- Japanese Shiatsu -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16" data-aos="fade-right">
+      <div class="bg-blue-50 p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-blue-700 mb-4">Japanese Shiatsu</h3>
+        <p class="text-gray-700 mb-4">
+          Japanese Shiatsu, meaning "finger pressure," evolved in early 20th century Japan from older practices like Anma. It applies steady pressure using thumbs, fingers, palms, and elbows to acupressure points and meridians, helping to alleviate stress, reduce muscle tension, and improve vitality.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Performed fully clothed on a mat or table without oils, Shiatsu's rhythmic pressure triggers the body's relaxation response. The calm, soothing environment enhances its meditative effect. Ideal for stress, back/neck pain, and headaches, it's a comfortable introduction to acupressure for all ages.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">60 mins / $80</span>
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Stress Relief</span>
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Non-Invasive</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+             alt="Shiatsu Massage" 
+             class="rounded-lg shadow-md w-full h-96 object-cover">
+      </div>
+    </div>
+    
+    <!-- Indian Ayurvedic (Abhyanga) -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16" data-aos="fade-left">
+      <div class="order-1 md:order-2 bg-green-50 p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-green-700 mb-4">Indian Ayurvedic Massage (Abhyanga)</h3>
+        <p class="text-gray-700 mb-4">
+          Ayurvedic Abhyanga is a cornerstone of India's 3,000-year-old healing system. The term means "massage" in Sanskrit and involves warm, herbal oils (often sesame) applied with long, flowing strokes to nourish body, mind, and spirit. It lubricates joints, enhances circulation, and supports lymphatic detoxification.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Typically performed by one or two therapists with light-to-moderate pressure, Abhyanga is deeply soothing. Post-massage, a steam or warm towel treatment helps oils penetrate. Clients report improved sleep, reduced anxiety, and glowing skin from this meditative practice.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">75 mins / $90</span>
+          <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Detoxifying</span>
+          <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">Dosha-Specific</span>
+        </div>
+      </div>
+      <div class="order-2 md:order-1 flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="Ayurvedic Massage" 
+             class="rounded-lg shadow-md w-full h-96 object-cover">
+      </div>
+    </div>
+    
+    <!-- Korean Hand Therapy -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16" data-aos="fade-right">
+      <div class="bg-purple-50 p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-purple-700 mb-4">Korean Hand Therapy (KHT)</h3>
+        <p class="text-gray-700 mb-4">
+          Developed in the 1970s by Dr. Tae-Woo Yoo, Korean Hand Therapy (KHT) is based on the concept that the hand mirrors the entire body. Therapists examine hands for sensitive points, then apply acupressure (sometimes with tools/magnets) to corresponding organs/body regions.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Sessions (30-60 mins) are done seated and can address headaches, sinus congestion, digestive issues, and joint pain. The non-invasive approach makes it ideal for those who prefer focused treatment without full-body exposure. Many report whole-body relaxation from hand stimulation alone.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">45 mins / $65</span>
+          <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Microcosm Theory</span>
+          <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">Quick Relief</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1630&q=80" 
+             alt="Korean Hand Therapy" 
+             class="rounded-lg shadow-md w-full h-96 object-cover">
+      </div>
+    </div>
+    
+    <!-- Balinese Massage -->
+    <div class="grid md:grid-cols-2 gap-8 mb-16" data-aos="fade-left">
+      <div class="order-1 md:order-2 bg-yellow-50 p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-yellow-700 mb-4">Indonesian/Balinese Massage</h3>
+        <p class="text-gray-700 mb-4">
+          Balinese Massage blends Ayurveda, Chinese acupressure, and Indonesian traditions. Originating in Bali, it's known for luxurious spa experiences with warm coconut oil infused with local herbs (lemongrass, ylang-ylang). Therapists use long strokes, kneading, acupressure, and gentle stretching.
+        </p>
+        <p class="text-gray-700 mb-4">
+          The rhythm alternates between deep tissue work and soothing strokes, inducing mental clarity alongside muscle relief. Ideal for stress relief and sensory rejuvenation, it's both therapeutic and indulgent—perfect for those seeking a tropical wellness escape.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">90 mins / $110</span>
+          <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Aromatic Oils</span>
+          <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">Full-Body Relaxation</span>
+        </div>
+      </div>
+      <div class="order-2 md:order-1 flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="Balinese Massage" 
+             class="rounded-lg shadow-md w-full h-96 object-cover">
+      </div>
+    </div>
+    
+    <!-- Tibetan Ku Nye -->
+    <div class="grid md:grid-cols-2 gap-8" data-aos="fade-right">
+      <div class="bg-indigo-50 p-8 rounded-lg shadow-md">
+        <h3 class="text-2xl font-bold text-indigo-700 mb-4">Tibetan Ku Nye Massage</h3>
+        <p class="text-gray-700 mb-4">
+          Tibetan Ku Nye ("oil massage") balances the three humors (wind, bile, phlegm) through warmed herbal oils and manual techniques. Drawing from Ayurveda, Chinese medicine, and Tibetan practices, it alleviates stress, improves circulation, and restores harmony.
+        </p>
+        <p class="text-gray-700 mb-4">
+          Sessions include rubbing, kneading, acupressure, stretching, and sometimes heat therapy (stones/compresses). A unique flour rub may conclude the treatment to exfoliate. Clients emerge with profound calm, relief from headaches/joint stiffness, and nourished skin.
+        </p>
+        <div class="flex flex-wrap gap-2">
+          <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">80 mins / $95</span>
+          <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Herbal Oils</span>
+          <span class="bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full text-sm font-medium">Energy Balancing</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <img src="https://images.unsplash.com/photo-1591348122449-02525d70379b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+             alt="Tibetan Ku Nye Massage" 
+             class="rounded-lg shadow-md w-full h-96 object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ===== Services Section ===== -->
+  <section id="services" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">Our Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Service Card 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all" data-aos="zoom-in">
+          <div class="bg-amber-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-spa text-amber-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-3">Deep Tissue Massage</h3>
+          <p class="text-gray-700 text-center mb-4">Targets chronic muscle tension with slow, deliberate pressure.</p>
+          <ul class="text-sm text-gray-600 mb-4">
+            <li class="mb-1"><i class="fas fa-check text-amber-600 mr-2"></i> Relieves deep muscle pain</li>
+            <li class="mb-1"><i class="fas fa-check text-amber-600 mr-2"></i> Improves posture</li>
+            <li class="mb-1"><i class="fas fa-check text-amber-600 mr-2"></i> 60 or 90 min sessions</li>
+          </ul>
+          <button class="btn-gradient text-white px-6 py-2 rounded-full font-medium block mx-auto">Book Now</button>
+        </div>
+        
+        <!-- Service Card 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all" data-aos="zoom-in" data-aos-delay="200">
+          <div class="bg-blue-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-leaf text-blue-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-3">Aromatherapy</h3>
+          <p class="text-gray-700 text-center mb-4">Enhances relaxation with essential oils tailored to your needs.</p>
+          <ul class="text-sm text-gray-600 mb-4">
+            <li class="mb-1"><i class="fas fa-check text-blue-600 mr-2"></i> Reduces stress</li>
+            <li class="mb-1"><i class="fas fa-check text-blue-600 mr-2"></i> Boosts mood</li>
+            <li class="mb-1"><i class="fas fa-check text-blue-600 mr-2"></i> 45 or 60 min sessions</li>
+          </ul>
+          <button class="btn-gradient text-white px-6 py-2 rounded-full font-medium block mx-auto">Book Now</button>
+        </div>
+        
+        <!-- Service Card 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all" data-aos="zoom-in" data-aos-delay="400">
+          <div class="bg-green-100 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4 mx-auto">
+            <i class="fas fa-fire text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-center mb-3">Hot Stone Therapy</h3>
+          <p class="text-gray-700 text-center mb-4">Warm stones melt away tension for deep relaxation.</p>
+          <ul class="text-sm text-gray-600 mb-4">
+            <li class="mb-1"><i class="fas fa-check text-green-600 mr-2"></i> Improves circulation</li>
+            <li class="mb-1"><i class="fas fa-check text-green-600 mr-2"></i> Eases muscle stiffness</li>
+            <li class="mb-1"><i class="fas fa-check text-green-600 mr-2"></i> 75 min sessions</li>
+          </ul>
+          <button class="btn-gradient text-white px-6 py-2 rounded-full font-medium block mx-auto">Book Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About Us Section ===== -->
+  <section id="about" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div data-aos="fade-right">
+          <h2 class="text-4xl font-bold mb-6 text-gray-800">About Serene Spa</h2>
+          <p class="text-gray-700 mb-4">
+            Founded in 2010, Serene Spa brings ancient healing traditions to the modern world. Our licensed therapists are trained in authentic techniques passed down through generations.
+          </p>
+          <p class="text-gray-700 mb-6">
+            We believe in holistic wellness—treating not just the body, but the mind and spirit. Every session is tailored to your unique needs, ensuring a transformative experience.
+          </p>
+          <div class="flex space-x-4">
+            <div class="text-center">
+              <div class="text-3xl font-bold text-amber-600">12+</div>
+              <div class="text-gray-600">Years Experience</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-amber-600">5,000+</div>
+              <div class="text-gray-600">Happy Clients</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-amber-600">15</div>
+              <div class="text-gray-600">Certified Therapists</div>
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-left">
+          <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Spa Team" class="rounded-lg shadow-md w-full">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials Section ===== -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-800" data-aos="fade-up">What Our Clients Say</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="flip-left">
+          <div class="flex items-center mb-4">
+            <div class="text-amber-500">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            "The Thai massage was life-changing! I’ve never felt so relaxed and energized at the same time. Will definitely return."
+          </p>
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J." class="w-12 h-12 rounded-full mr-3">
+            <div>
+              <h4 class="font-bold">Sarah J.</h4>
+              <p class="text-sm text-gray-600">Verified Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="flip-left" data-aos-delay="200">
+          <div class="flex items-center mb-4">
+            <div class="text-amber-500">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            "The Tui Na massage fixed my chronic back pain after just two sessions. The therapists are true experts!"
+          </p>
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael T." class="w-12 h-12 rounded-full mr-3">
+            <div>
+              <h4 class="font-bold">Michael T.</h4>
+              <p class="text-sm text-gray-600">Verified Client</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-md" data-aos="flip-left" data-aos-delay="400">
+          <div class="flex items-center mb-4">
+            <div class="text-amber-500">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+          <p class="text-gray-700 italic mb-4">
+            "The ambiance is so peaceful, and the Shiatsu massage melted my stress away. Highly recommend this place!"
+          </p>
+          <div class="flex items-center">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Lisa M." class="w-12 h-12 rounded-full mr-3">
+            <div>
+              <h4 class="font-bold">Lisa M.</h4>
+              <p class="text-sm text-gray-600">Verified Client</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact Section ===== -->
+  <section id="contact" class="py-16 bg-gray-800 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">Contact Us</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div data-aos="fade-right">
+          <h3 class="text-2xl font-bold mb-4">Get In Touch</h3>
+          <p class="mb-6">Book an appointment or ask us anything. We’re here to help!</p>
+          
+          <div class="mb-4">
+            <div class="flex items-center mb-2">
+              <i class="fas fa-map-marker-alt text-amber-400 mr-3"></i>
+              <span>123 Wellness Lane, Serene City, SC 12345</span>
+            </div>
+            <div class="flex items-center mb-2">
+              <i class="fas fa-phone text-amber-400 mr-3"></i>
+              <span>(123) 456-7890</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-envelope text-amber-400 mr-3"></i>
+              <span>hello@serenespa.com</span>
+            </div>
+          </div>
+          
+          <h4 class="text-xl font-bold mt-8 mb-4">Opening Hours</h4>
+          <ul class="space-y-2">
+            <li class="flex justify-between">
+              <span>Monday - Friday</span>
+              <span>9:00 AM - 8:00 PM</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Saturday</span>
+              <span>10:00 AM - 6:00 PM</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Sunday</span>
+              <span>Closed</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div data-aos="fade-left">
+          <form class="bg-gray-700 p-6 rounded-lg shadow-md">
+            <div class="mb-4">
+              <label for="name" class="block mb-2">Your Name</label>
+              <input type="text" id="name" class="w-full px-4 py-2 rounded bg-gray-600 border border-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400">
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block mb-2">Email</label>
+              <input type="email" id="email" class="w-full px-4 py-2 rounded bg-gray-600 border border-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400">
+            </div>
+            <div class="mb-4">
+              <label for="phone" class="block mb-2">Phone (Optional)</label>
+              <input type="tel" id="phone" class="w-full px-4 py-2 rounded bg-gray-600 border border-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400">
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block mb-2">Message</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-2 rounded bg-gray-600 border border-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-400"></textarea>
+            </div>
+            <button type="submit" class="btn-gradient text-white px-6 py-3 rounded-full font-bold w-full hover:shadow-lg transition-all">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Newsletter Section ===== -->
+  <section class="py-12 bg-amber-600 text-white">
+    <div class="container mx-auto px-4 text-center" data-aos="zoom-in">
+      <h2 class="text-3xl font-bold mb-4">Join Our Wellness Community</h2>
+      <p class="mb-6 max-w-2xl mx-auto">Subscribe to our newsletter for exclusive offers, wellness tips, and updates.</p>
+      <form class="max-w-md mx-auto flex">
+        <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l focus:outline-none text-gray-800">
+        <button type="submit" class="bg-gray-800 px-6 py-3 rounded-r font-bold hover:bg-gray-900 transition-all">
+          Subscribe
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer Section ===== -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <!-- Column 1 -->
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">Serene Spa</h3>
+          <p class="mb-4">Holistic wellness through traditional healing arts since 2010.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-amber-400 hover:text-amber-300"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-amber-400 hover:text-amber-300"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-amber-400 hover:text-amber-300"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+        
+        <!-- Column 2 -->
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#home" class="hover:text-amber-400">Home</a></li>
+            <li><a href="#massage" class="hover:text-amber-400">Massages</a></li>
+            <li><a href="#services" class="hover:text-amber-400">Services</a></li>
+            <li><a href="#about" class="hover:text-amber-400">About Us</a></li>
+            <li><a href="#contact" class="hover:text-amber-400">Contact</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 3 -->
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">Services</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-amber-400">Thai Massage</a></li>
+            <li><a href="#" class="hover:text-amber-400">Tui Na</a></li>
+            <li><a href="#" class="hover:text-amber-400">Shiatsu</a></li>
+            <li><a href="#" class="hover:text-amber-400">Aromatherapy</a></li>
+            <li><a href="#" class="hover:text-amber-400">Hot Stone</a></li>
+          </ul>
+        </div>
+        
+        <!-- Column 4 -->
+        <div>
+          <h3 class="text-white text-lg font-bold mb-4">Legal</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-amber-400">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-amber-400">Terms of Service</a></li>
+            <li><a href="#" class="hover:text-amber-400">Cancellation Policy</a></li>
+            <li><a href="#" class="hover:text-amber-400">Gift Cards</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p>&copy; 2023 Serene Spa. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+    
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    });
+  </script>
+  
+  
+  
+  
+  
+  <div>
+    <!-- Chatbot Widget -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <button id="chatbot-toggle" class="bg-amber-500 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center hover:bg-amber-600 transition-all">
+      <i class="fas fa-comment-dots text-2xl"></i>
+    </button>
+    
+    <!-- Chatbot Container (Hidden by Default) -->
+    <div id="chatbot-container" class="hidden w-80 bg-white rounded-lg shadow-xl overflow-hidden absolute bottom-20 right-0">
+      <!-- Chat Header -->
+      <div class="bg-amber-500 text-white p-4 flex items-center">
+        <div class="w-10 h-10 rounded-full bg-amber-400 flex items-center justify-center mr-3">
+          <i class="fas fa-spa"></i>
+        </div>
+        <div>
+          <h3 class="font-bold">Serene Spa Assistant</h3>
+          <p class="text-xs opacity-80">AI-powered wellness guide</p>
+        </div>
+        <button id="close-chatbot" class="ml-auto text-white">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <!-- Chat Messages -->
+      <div id="chat-messages" class="chat-container bg-white p-4 overflow-y-auto flex flex-col space-y-3">
+        <!-- Initial Bot Message -->
+        <div class="chat-message bot-message p-3 text-sm">
+          <p>Hello! I'm your Serene Spa assistant. 😊 How can I help you today? Here are some things I can tell you about:</p>
+          <div class="mt-2 flex flex-wrap gap-2">
+            <button class="suggestion-btn bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs">Thai Massage</button>
+            <button class="suggestion-btn bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs">Tui Na</button>
+            <button class="suggestion-btn bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs">Shiatsu</button>
+            <button class="suggestion-btn bg-amber-100 text-amber-800 px-3 py-1 rounded-full text-xs">Bookings</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Chat Input -->
+      <div class="border-t border-gray-200 p-3 bg-gray-50">
+        <div class="flex">
+          <input id="chat-input" type="text" placeholder="Type your message..." 
+                 class="chat-input flex-grow px-4 py-2 rounded-l-full border border-gray-300 focus:border-amber-400">
+          <button id="send-btn" class="bg-amber-500 text-white px-4 py-2 rounded-r-full hover:bg-amber-600 transition-all">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+        <p class="text-xs text-gray-500 mt-2 text-center">Ask about our massages, pricing, or availability</p>
+      </div>
+    </div>
+  </div>
+ </div>
+  <script>
+    // Knowledge Base for the Chatbot (Customize with your content)
+    const knowledgeBase = {
+      greetings: [
+        "Hello! How can I assist you today?",
+        "Hi there! What would you like to know about our spa services?",
+        "Welcome! I'm here to help with any questions about our traditional massages."
+      ],
+      farewells: [
+        "Have a wonderful day! Visit us soon for relaxation.",
+        "Thank you for chatting! Namaste 🙏",
+        "Feel free to return if you have more questions. Be well!"
+      ],
+      services: {
+        "thai massage": {
+          summary: "Traditional Thai Massage is a 2,500-year-old healing system combining acupressure and assisted yoga stretches. Performed fully clothed without oils, it improves flexibility and energy flow (UNESCO cultural heritage).",
+          duration: "60-90 minutes",
+          price: "$75-$110",
+          benefits: "Relieves muscle tension, improves posture, boosts energy"
+        },
+        "tui na": {
+          summary: "Chinese Tui Na ('push-grasp') uses therapeutic techniques to balance qi energy through meridians. Focused on specific pain relief with brushing, kneading, and joint rotations.",
+          duration: "60 minutes",
+          price: "$70",
+          benefits: "Targets back/neck pain, improves circulation, harmonizes energy"
+        },
+        "shiatsu": {
+          summary: "Japanese Shiatsu ('finger pressure') applies steady pressure to acupoints to relieve stress and tension. Performed clothed on a mat in a calm environment.",
+          duration: "60 minutes",
+          price: "$80",
+          benefits: "Reduces stress, alleviates headaches, promotes relaxation"
+        },
+        "ayurvedic": {
+          summary: "Ayurvedic Abhyanga uses warm herbal oils in long strokes to nourish body and mind. Includes dosha-specific oils and optional steam therapy.",
+          duration: "75 minutes",
+          price: "$90",
+          benefits: "Detoxifies, calms nervous system, improves skin health"
+        }
+      },
+      bookings: {
+        hours: "We're open Tuesday-Sunday from 9AM to 8PM. Closed Mondays.",
+        process: "Book online via our website or call (123) 456-7890. 24-hour cancellation policy applies.",
+        group: "We offer group sessions (max 4 people) with 10% discount."
+      },
+      default: [
+        "I'm not sure I understand. Could you rephrase that?",
+        "I specialize in massage therapy information. Try asking about Thai, Tui Na, or Shiatsu!",
+        "For complex questions, please call our staff at (123) 456-7890."
+      ]
+    };
+
+    // DOM Elements
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotContainer = document.getElementById('chatbot-container');
+    const closeChatbot = document.getElementById('close-chatbot');
+    const chatMessages = document.getElementById('chat-messages');
+    const chatInput = document.getElementById('chat-input');
+    const sendBtn = document.getElementById('send-btn');
+    const suggestionBtns = document.querySelectorAll('.suggestion-btn');
+
+    // Toggle Chatbot Visibility
+    chatbotToggle.addEventListener('click', () => {
+      chatbotContainer.classList.toggle('hidden');
+    });
+
+    closeChatbot.addEventListener('click', () => {
+      chatbotContainer.classList.add('hidden');
+    });
+
+    // Handle Suggestion Buttons
+    suggestionBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const topic = e.target.textContent.toLowerCase();
+        chatInput.value = `Tell me about ${topic}`;
+        sendMessage();
+      });
+    });
+
+    // Send Message Function
+    function sendMessage() {
+      const message = chatInput.value.trim();
+      if (!message) return;
+
+      // Add user message to chat
+      addMessage(message, 'user');
+      chatInput.value = '';
+
+      // Simulate "typing" delay
+      setTimeout(() => {
+        const botResponse = generateResponse(message);
+        addMessage(botResponse, 'bot');
+      }, 800);
+    }
+
+    // Add Message to Chat UI
+    function addMessage(text, sender) {
+      const messageDiv = document.createElement('div');
+      messageDiv.classList.add('chat-message', 'p-3', 'text-sm');
+      messageDiv.classList.add(sender === 'bot' ? 'bot-message' : 'user-message');
+      messageDiv.innerHTML = `<p>${text}</p>`;
+      chatMessages.appendChild(messageDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Generate Bot Response
+    function generateResponse(userInput) {
+      const input = userInput.toLowerCase();
+      
+      // Check for greetings
+      if (input.match(/hello|hi|hey|greetings/)) {
+        return randomResponse(knowledgeBase.greetings);
+      }
+      
+      // Check for farewells
+      if (input.match(/bye|goodbye|see you|thanks|thank you/)) {
+        return randomResponse(knowledgeBase.farewells);
+      }
+      
+      // Check for service inquiries
+      for (const [service, details] of Object.entries(knowledgeBase.services)) {
+        if (input.includes(service)) {
+          return `
+            <strong>${service.toUpperCase()} INFO:</strong><br>
+            ${details.summary}<br><br>
+            <strong>Duration:</strong> ${details.duration}<br>
+            <strong>Price:</strong> ${details.price}<br>
+            <strong>Benefits:</strong> ${details.benefits}
+          `;
+        }
+      }
+      
+      // Check for booking info
+      if (input.match(/book|appointment|schedule|availability|hours/)) {
+        return `
+          <strong>BOOKING INFO:</strong><br>
+          ${knowledgeBase.bookings.process}<br><br>
+          <strong>Hours:</strong> ${knowledgeBase.bookings.hours}<br>
+          ${knowledgeBase.bookings.group}
+        `;
+      }
+      
+      // Default response
+      return randomResponse(knowledgeBase.default);
+    }
+
+    // Helper: Get random response from array
+    function randomResponse(responses) {
+      return responses[Math.floor(Math.random() * responses.length)];
+    }
+
+    // Event Listeners
+    sendBtn.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+  </script>
+ 
+</body>
+</html>
